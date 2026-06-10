@@ -16,3 +16,5 @@
 function defaultFn() {
   return 'default export';
 }
+
+export default defaultFn;
