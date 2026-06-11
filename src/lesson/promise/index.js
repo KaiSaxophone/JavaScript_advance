@@ -38,4 +38,22 @@ const returnPromise = () => {
 };
 
 returnPromise()
-  .catch((message) => console.log(message));
+  .catch((err) => console.log(err));
+
+// returnPromise()
+//   .catch((message) => console.log(message));
+
+// const promise = new Promise((resolve, reject) => {
+//     resolve('成功');
+//     reject('失敗');
+//   })
+
+
+// console.log(promise);
+// promise.then(val => {
+//   console.log(val);
+// })
+// .catch(err => {
+//   console.log(err);
+  
+// })
