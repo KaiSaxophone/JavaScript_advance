@@ -23,12 +23,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
               // HTML要素を生成
               const pokemonHTML = 
-              `<li class="list-item">
-                <div class="character">
-                  <img src="${pokemonImg}" width="475" height="475" alt="" class="character__img">
-                </div>
-                <p class="character__name">${japanesePokemonName}</p>
-              </li>
+              `
+                <li class="list-item">
+                  <div class="character">
+                    <img src="${pokemonImg}" width="475" height="475" alt="" class="character__img">
+                  </div>
+                  <p class="character__name">${japanesePokemonName}</p>
+                </li>
               `
               const fragment = createElements(pokemonHTML);
               list.appendChild(fragment);
