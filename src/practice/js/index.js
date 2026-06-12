@@ -9,10 +9,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   $axios("https://pokeapi.co/api/v2/pokemon/?limit=151")
     .then((response) => {
-      // ポケモンの一覧情報がconsoleに表示される
+      const pokemonList = response.data.results;
+      console.log(pokemonList);
 
-      for (let i = 0; i < 151; i++) {
-        $axios(response.data.results[i].url)
+      // ポケモンの一覧情報がconsoleに表示される
+      pokemonList.forEach(pokemonData => {
+        $axios(pokemonData.url)
           .then((response) => {
             // 画像を取得
             const pokemonImg = response.data.sprites.other["official-artwork"].front_default;
@@ -43,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
             createErrorElement(message);
             console.log(message);
           });
-      };
+      });
     })
 
     .catch((message) => {
