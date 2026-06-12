@@ -33,8 +33,16 @@ window.addEventListener("DOMContentLoaded", () => {
               `
               const fragment = createElements(pokemonHTML);
               list.appendChild(fragment);
+            })
+            .catch((message) => {
+              createErrorElement(message);
+              console.log(message);
             });
           })
+          .catch((message) => {
+            createErrorElement(message);
+            console.log(message);
+          });
       };
     })
 
