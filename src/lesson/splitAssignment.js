@@ -1,10 +1,8 @@
 // ここにコードを書きながら確認しましょう！
 
-
-
-
-
-
+// 問題1
+const [one, two, three] = arrayFn('React');
+console.log(three);
 
 
 
@@ -18,8 +16,8 @@ function arrayFn(arg) {
 }
 
 // 問題 2
-function objectFn() {
-  console.log();
+function objectFn({name}) {
+  console.log(name);
 }
 
 const argObject = {

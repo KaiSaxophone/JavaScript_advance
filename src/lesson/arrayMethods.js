@@ -26,3 +26,16 @@ const array = [
     className: 'piyo',
   },
 ];
+
+// プロパティclassNameのvalueにc-というプレフィックスを付与
+
+// consoleの出力が下記のようになっていればOKです。
+
+// [
+//   { tag: 'p', className: 'c-hoge' },
+//   { tag: 'div', className: 'c-fuga' },
+//   { tag: 'h1', className: 'c-piyo' }
+// ]
+
+const newArray = array.map(object => ({...object, className: `c-${object.className}` }));
+console.log(newArray);
